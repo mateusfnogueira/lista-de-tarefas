@@ -1,13 +1,13 @@
 <template>
   <v-app>
     <Header />
-    <v-content>
+    <v-main>
       <v-container>
         <transition name="slide" mode="out-in">
           <router-view></router-view>
         </transition>
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

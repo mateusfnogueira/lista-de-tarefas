@@ -8,7 +8,7 @@
         hide-details="auto"
         type="text"
         outlined
-        @keyup.enter="onSubmit"
+        @keyup.enter="addTask"
       >
         <v-icon slot="prepend" color="blue">
           mdi-checkbook
@@ -25,8 +25,30 @@
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
+import { mapActions } from "vuex";
 export default {
   name: "Home",
-  components: {},
+  data() {
+    return {
+      id: 0,
+    };
+  },
+  computed: {
+    completed() {
+      return this.$store.state.parametro.completed;
+    },
+  },
+  methods: {
+    ...mapActions("tarefas", ["addTask"]),
+    addTask() {
+      const task = {
+        id: this.id,
+        title: this.title,
+        completed: this.completed
+      }
+      this.id++
+      this.addTask(task)
+    }
+  },
 };
 </script>
