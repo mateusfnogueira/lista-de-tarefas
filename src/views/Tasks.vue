@@ -28,13 +28,13 @@ export default {
   data() {
     return {
       tasks: [
-        { id: 1, title: "fazer compras", pending: true },
-        { id: 2, title: "fazer compras", pending: false },
-        { id: 3, title: "fazer compras", pending: false },
-        { id: 4, title: "fazer compras", pending: true },
-        { id: 6, title: "fazer compras", pending: true },
-        { id: 7, title: "fazer compras", pending: true },
-        { id: 8, title: "fazer compras", pending: true },
+        { id: 1, title: "fazer compras", completed: true },
+        { id: 2, title: "fazer compras", completed: false },
+        { id: 3, title: "fazer compras", completed: false },
+        { id: 4, title: "fazer compras", completed: true },
+        { id: 6, title: "fazer compras", completed: true },
+        { id: 7, title: "fazer compras", completed: true },
+        { id: 8, title: "fazer compras", completed: true },
       ],
     };
   },
